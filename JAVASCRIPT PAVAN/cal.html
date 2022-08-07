@@ -8,24 +8,52 @@
 </head>
 <body>
     <input type="text1" id="value1" placeholder="Enter value1">
-    <input type="text1" id="value2"placeholder="Enter value1">
+    <input type="text1" id="value2" placeholder="Enter value2"> <br>
+
 
     <button id="btn">Click To ADD</button><br/>
+    <button id="btn2">Click To Mul</button><br/>
+    <button id="btn3">Click To Div</button><br/>
     <p id="dis"> </p>
 
 
 <script>
 
-    document.getElementById("btn").onclick=addTwoNumbers();
+    document.getElementById("btn").onclick = addTwoNumbers;
+    document.getElementById("btn2").onclick = mulTwoNumbers;
+    document.getElementById("btn3").onclick = divTwoNumbers;
 
     function addTwoNumbers()
     {
 
     let a = document.getElementById("value1").value;
     let b = document.getElementById("value2").value;
-    let res = parse(a)+parse(b);
+    let res = parseInt(a)+ parseInt(b);
         document.getElementById("dis").innerHTML=res;
+        document.getElementById("btn").innerHTML="Total value";
+        document.getElementById("btn").disabled=true;
+    }
 
+    function mulTwoNumbers()
+    {
+
+    let a = document.getElementById("value1").value;
+    let b = document.getElementById("value2").value;
+    let res = parseInt(a) * parseInt(b);
+        document.getElementById("dis").innerHTML=res;
+        document.getElementById("btn2").innerHTML="Total value";
+        document.getElementById("btn2").disabled=true;
+    }
+
+    function divTwoNumbers()
+    {
+
+    let a = document.getElementById("value1").value;
+    let b = document.getElementById("value2").value;
+    let res = parseInt(a)/ parseInt(b);
+        document.getElementById("dis").innerHTML=res;
+        document.getElementById("btn3").innerHTML="Total value";
+        document.getElementById("btn3").disabled=true;
     }
 
 
